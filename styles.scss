@@ -225,6 +225,29 @@ p {
 
     }
 
+    @include mediaQuery(768px) {
+        width: 24rem;
+
+        h1 {
+            font-size: 1.3em;
+        }
+
+        .main-paragraph {
+            font-size: 0.9em;
+            margin-inline: 2rem;
+        }
+
+        .price-plan {
+            font-size: 1.15em;
+        }
+
+        .proceed,
+        .cancel {
+            font-size: 1em;
+        }
+
+    }
+
 }
 
 .attribution {

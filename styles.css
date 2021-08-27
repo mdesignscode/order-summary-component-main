@@ -175,6 +175,25 @@ p {
     margin-left: -3.5rem;
   }
 }
+@media (min-width: 768px) {
+  .container {
+    width: 24rem;
+  }
+  .container h1 {
+    font-size: 1.3em;
+  }
+  .container .main-paragraph {
+    font-size: 0.9em;
+    margin-inline: 2rem;
+  }
+  .container .price-plan {
+    font-size: 1.15em;
+  }
+  .container .proceed,
+.container .cancel {
+    font-size: 1em;
+  }
+}
 
 .attribution {
   display: flex;
