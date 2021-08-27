@@ -1,0 +1,270 @@
+@import url(https://fonts.google.com/specimen/Red+Hat+Display);
+/******************* Global element styling *******************/
+* {
+  /* ************* Master reset ************* */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 0;
+  outline: 0;
+  vertical-align: baseline;
+  font-family: inherit;
+  color: inherit;
+  font-size: 100%;
+  font-style: inherit;
+  text-decoration: none;
+  list-style: none;
+  line-height: 1.7;
+  text-align: center;
+}
+
+body {
+  background-color: #e0e8ff;
+  display: grid;
+  place-items: center;
+  max-width: 100%;
+  height: 100%;
+  font-family: "Red Hat Display", sans-serif;
+  background-image: url(./images/pattern-background-mobile.svg);
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  animation: move 10s;
+  -webkit-animation: move 10s;
+}
+@keyframes move {
+  0% {
+    background-position: 0 0rem;
+  }
+  50% {
+    background-position: 0 38rem;
+  }
+  100% {
+    background-position: 0 0rem;
+  }
+}
+@media (min-width: 768px) {
+  body {
+    background-image: url(./images/pattern-background-desktop.svg);
+  }
+}
+
+h3,
+span,
+p {
+  font-size: 0.8em;
+  text-align: left;
+  color: #7280a7;
+}
+
+/******************* Container styling *******************/
+.container {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  background-color: #fff;
+  border-radius: 1.3rem;
+  -webkit-border-radius: 1.3rem;
+  -moz-border-radius: 1.3rem;
+  -ms-border-radius: 1.3rem;
+  -o-border-radius: 1.3rem;
+  text-align: center;
+  width: 85%;
+  box-shadow: 0 1px 2.2px rgba(0, 0, 0, 0.028), 0 2.4px 5.3px rgba(0, 0, 0, 0.04), 0 4.5px 10px rgba(0, 0, 0, 0.05), 0 8px 17.9px rgba(0, 0, 0, 0.06), 0 15px 33.4px rgba(0, 0, 0, 0.072), 0 36px 80px rgba(0, 0, 0, 0.1);
+  /******************* Larger screens *******************/
+}
+.container .hero {
+  border-radius: 1.3rem 1.3rem 0 0;
+  -webkit-border-radius: 1.3rem 1.3rem 0 0;
+  -moz-border-radius: 1.3rem 1.3rem 0 0;
+  -ms-border-radius: 1.3rem 1.3rem 0 0;
+  -o-border-radius: 1.3rem 1.3rem 0 0;
+  justify-content: center;
+  width: 100%;
+}
+.container h1 {
+  color: #1f2f56;
+  font-weight: 900;
+  font-size: 1.2em;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.container .main-paragraph {
+  font-size: 0.85em;
+  margin-inline: 2rem;
+  margin-bottom: 1.2rem;
+  text-align: center;
+}
+.container .price-plan {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-inline: auto;
+  background-color: #f5f7ff;
+  margin-bottom: 1.5rem;
+  width: 85%;
+  padding: 1rem;
+  border-radius: 0.6rem;
+  -webkit-border-radius: 0.6rem;
+  -moz-border-radius: 0.6rem;
+  -ms-border-radius: 0.6rem;
+  -o-border-radius: 0.7rem;
+  font-size: 1em;
+}
+.container .price-plan img {
+  width: 2.5em;
+  height: 2.5em;
+}
+.container .price-plan a {
+  color: #3829e0;
+  text-decoration: underline;
+}
+.container .price-plan a:hover {
+  text-decoration: none;
+}
+.container .price-plan .plan {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: left;
+  margin-left: -1rem;
+}
+.container .price-plan .plan h3 {
+  color: #1f2f56;
+}
+.container .proceed,
+.container .cancel {
+  font-size: 0.9em;
+}
+.container .proceed {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.container .proceed button {
+  background-color: #3829e0;
+  padding: 0.7rem;
+  font-weight: 700;
+  width: 85%;
+  text-align: center;
+  border-radius: 0.7rem;
+  -webkit-border-radius: 0.7rem;
+  -moz-border-radius: 0.7rem;
+  -ms-border-radius: 0.7rem;
+  -o-border-radius: 0.7rem;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0 1.3px 1.9px rgba(0, 0, 0, 0.09), 0 10px 15px rgba(0, 0, 0, 0.18);
+}
+.container .cancel {
+  margin: 1.4rem;
+  display: flex;
+  justify-content: center;
+}
+@media (min-width: 375px) {
+  .container {
+    width: 22rem;
+  }
+  .container .main-paragraph {
+    margin-inline: 3rem;
+  }
+  .container .price-plan .plan {
+    margin-left: -3.5rem;
+  }
+}
+
+.attribution {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  position: relative;
+  top: 50%;
+  font-size: 0.85em;
+  position: relative;
+}
+.attribution .codedby {
+  position: absolute;
+  bottom: -2200%;
+}
+.attribution .challengeby {
+  margin-top: -4%;
+}
+@media (max-width: 315px) {
+  .attribution .challengeby {
+    margin-top: 0%;
+    font-size: 0.8em;
+  }
+  .attribution .codedby {
+    top: 1900%;
+    font-size: 0.9em;
+  }
+}
+.attribution a {
+  color: #3829e0;
+  animation: colorful 10s infinite;
+  -webkit-animation: colorful 10s infinite;
+  font-size: 1.75em;
+  font-weight: bold;
+  font-family: sans-serif;
+  text-decoration: none;
+  color: transparent;
+  background: url("https://wweb.dev/resources/creative-hover-effects/wave.svg") repeat-x #fff;
+  background-position-x: 0%;
+  background-position-y: 0%;
+  background-size: auto;
+  background-clip: border-box;
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-size: 200% 100%;
+  background-position-x: 0;
+  background-position-y: 2em;
+  -webkit-transition: background-position-y 0.6s ease;
+  transition: background-position-y 0.6s ease;
+  -webkit-animation: waveAnimation 4s infinite linear;
+  animation: waveAnimation 4s infinite linear;
+  animation-play-state: running;
+  -webkit-animation-play-state: paused;
+  animation-play-state: paused;
+}
+.attribution a:hover {
+  background-position-x: 0;
+  background-position-y: 0;
+  -webkit-animation-play-state: running;
+  animation-play-state: running;
+  scale: 1.2;
+}
+@keyframes waveAnimation {
+  from {
+    background-position-x: 0%;
+  }
+  to {
+    background-position-x: 200%;
+  }
+}
+@media (min-width: 700px) {
+  .attribution .codedby,
+.attribution .challengeby {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+  }
+  .attribution .challengeby {
+    transform: translate(-270%, 300%);
+    -webkit-transform: translate(-270%, 300%);
+    -moz-transform: translate(-270%, 300%);
+    -ms-transform: translate(-270%, 300%);
+    -o-transform: translate(-270%, 300%);
+  }
+  .attribution .codedby {
+    transform: translate(230%, 400%);
+    -webkit-transform: translate(230%, 400%);
+    -moz-transform: translate(230%, 400%);
+    -ms-transform: translate(230%, 400%);
+    -o-transform: translate(230%, 400%);
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
